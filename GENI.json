@@ -1,0 +1,81 @@
+[
+{
+  "csp":"GENI",
+  "OS":"LINUX",
+  "name":"instageni.umkc_1",
+  "vCPU":"1",
+  "ram":"1.5",
+  "price":"0.0195",
+  "network":"5",
+  "clock":"1.2",
+  "pricing_ssd":"0.10",
+  "pricing_hdd":"0.045"
+},
+{
+  "csp":"GENI",
+  "OS":"LINUX",
+  "name":"xo.small",
+  "vCPU":"1",
+  "ram":"1",
+  "price":"0.0185",
+  "network":"5",
+  "clock":"1.2",
+  "pricing_ssd":"0.10",
+  "pricing_hdd":"0.045",
+  "storage" : "10"
+},
+{
+  "csp":"GENI",
+  "OS":"LINUX",
+  "name":"xo.medium",
+  "vCPU":"1",
+  "ram":"3",
+  "price":"0.0195",
+  "network":"5",
+  "clock":"1.2",
+  "pricing_ssd":"0.10",
+  "pricing_hdd":"0.045",
+  "storage" : "25"
+},
+{
+  "csp":"GENI",
+  "OS":"LINUX",
+  "name":"xo.large",
+  "vCPU":"2",
+  "ram":"6",
+  "price":"0.125",
+  "network":"5",
+  "clock":"1.2",
+  "pricing_ssd":"0.10",
+  "pricing_hdd":"0.045",
+  "storage" : "50"
+},
+{
+  "csp":"GENI",
+  "OS":"LINUX",
+  "name":"xo.large",
+  "vCPU":"4",
+  "ram":"12",
+  "price":"0.155",
+  "network":"5",
+  "clock":"1.2",
+  "pricing_ssd":"0.10",
+  "pricing_hdd":"0.045",
+  "storage" : "75"
+},
+{
+  "csp":"GENI",
+  "OS":"LINUX",
+  "name":"exogeni.m4",
+  "vCPU":"16",
+  "ram":"48",
+  "price":"0.455",
+  "network":"5",
+  "clock":"1.2",
+  "pricing_ssd":"0.10",
+  "pricing_hdd":"0.045",
+  "storage" : "146"
+}
+]
+
+

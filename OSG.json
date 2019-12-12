@@ -1,0 +1,26 @@
+[
+{
+  "csp":"OSG",
+  "OS":"LINUX",
+  "name":"osg._1",
+  "vCPU":"2",
+  "ram":"3",
+  "price":"0.0235",
+  "network":"5",
+  "clock":"1.2",
+  "pricing_ssd":"0.10",
+  "pricing_hdd":"0.045"
+},
+{
+  "csp":"OSG",
+  "OS":"LINUX",
+  "name":"osg._2",
+  "vCPU":"2",
+  "ram":"3",
+  "price":"0.0255",
+  "network":"5",
+  "clock":"3",
+  "pricing_ssd":"0.10",
+  "pricing_hdd":"0.045"
+}
+]

@@ -1,0 +1,12 @@
+{
+	"req_os":"LINUX",
+	"req_vCPU":"10",
+	"req_ram":"50",
+	"req_network":"5",
+	"req_clock":"1.1",
+	"req_gpu":false,
+	"req_storage":"20",
+	"req_ssd":false,
+	"req_threshold":"100",
+	"req_preference":"req_os, req_ram,.."
+}
