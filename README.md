@@ -1,5 +1,5 @@
 # OnTimeURB
-Grauate Research Project
+Graduate Research Project
 
 OnTimeURB stands for on time universal broker.
 This framework is created for configuring cloud infrastructure for scientfic/bioinformatics workflows. There are three components to this infrastructure deployment.
@@ -89,12 +89,16 @@ Furthermore instance from the cloud platform providers can be added as json obje
 
 The optimizer engine source is attached with the repository, the optimizer engine has certain prerequisites in terms of softwares. Below are the prerequisites,
 a) Install latest JDK: https://www.javahelps.com/2019/04/install-latest-oracle-jdk-on-linux.html 
+
 b) Install latest Apache Tomcat Web Server: https://tomcat.apache.org/tomcat-9.0-doc/setup.html
-c) Install *ILOG CPLEX* (student or trial version can be downloaded), https://www.ibm.com/analytics/cplex-optimizer This is required as it    is used within the optimizer for integer linear programming.
+
+c) Install *ILOG CPLEX* (student or trial version can be downloaded), https://www.ibm.com/analytics/cplex-optimizer This is required as    it is used within the optimizer for integer linear programming.
+
 d) The signature of the web service to be called with the optimizer:
    http://locahost:8080/TestingWeb/rest/getTemplateCatalog
    OR
    http://<machine_IP>:<machine_Port>/TestingWeb/rest/getTemplateCatalog
+   
 e) The repository have attached file with the name "Optimizer_Web_Service_Input" & "Optimizer_Web_Service_Output" for expected input and    output to the optimizer web service.
  
  ## Machine Learning Model
