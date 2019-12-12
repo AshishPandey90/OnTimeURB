@@ -13,8 +13,8 @@ d) Workflows are not included in this repository, but can be referered at Pgen w
 To create an infrastructure for distributed computing essentially a single submit server(host) and many client servers(clients) architecture is required. Towards that architecture varying configurations has to be made in submit host and clients. Below tools are used for ceating the infrastructure,
 
 a) A linux host machine with good resource configuration to host the cluster of clients interaction. A machine with 2-4 CPU cores, 8-16 GB RAM, 500 GB storage can be recommended, but it is subjective to user.
-b) *Pegasus Workflow Management System
-c) *HTCondor high throughput computing
+b) *Pegasus Workflow Management System*
+c) *HTCondor high throughput computing*
 d) *pyglidein* (python server-client pair for submitting HTCondor glidein jobs on remote batch systems)
 
 Steps to be followed for configuration,
@@ -87,7 +87,7 @@ Furthermore instance from the cloud platform providers can be added as json obje
 The optimizer engine source is attached with the repository, the optimizer engine has certain prerequisites in terms of softwares. Below are the prerequisites,
 a) Install latest JDK: https://www.javahelps.com/2019/04/install-latest-oracle-jdk-on-linux.html 
 b) Install latest Apache Tomcat Web Server: https://tomcat.apache.org/tomcat-9.0-doc/setup.html
-c) Install ILOG CPLEX(student or trial version can be downloaded), https://www.ibm.com/analytics/cplex-optimizer This is required as it    is used within the optimizer for integer linear programming.
+c) Install *ILOG CPLEX* (student or trial version can be downloaded), https://www.ibm.com/analytics/cplex-optimizer This is required as it    is used within the optimizer for integer linear programming.
 d) The signature of the web service to be called with the optimizer:
    http://locahost:8080/TestingWeb/rest/getTemplateCatalog
    OR
@@ -95,5 +95,5 @@ d) The signature of the web service to be called with the optimizer:
 e) The repository have attached file with the name "Optimizer_Web_Service_Input" & "Optimizer_Web_Service_Output" for expected input and    output to the optimizer web service.
  
  ## Machine Learning Model
- 
 
+The model is introduced as an aid to the optimizer engine to learn from previous application workflow executions and is implemented in java language. The prime objective of the model is to predict favorable cloud service platform (CSP) for executing certain application. The model tries to learn this from previous executions of the workflows and taking feedback from expert users for the corresponding cloud resource allocations. Since different users can have different priorities of CSPs for similar application workflows, this kind of learning should be classified based on probability, specifcally *naive bayes method* is implemented for classification. The probabilistic classification of selection of cloud platform can be used to bias the optimizer towards selecting specific platforms.
