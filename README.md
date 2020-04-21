@@ -3,9 +3,13 @@ Graduate Research Project
 
 OnTimeURB stands for on time universal broker.
 This framework is created for configuring cloud infrastructure for scientfic/bioinformatics workflows. There are three components to this infrastructure deployment.
+
 a) Configuring the infratructure with tools which help in distributed computing.
+
 b) Optimizer engine which helps in resource and service brokering for the users.
+
 c) Machine learning model to learn about performance variation incurred with execution of workflows on the infrastructure.
+
 d) Workflows are not included in this repository, but can be referered at Pgen workflow:https://github.com/pegasus-isi/PGen-GenomicVariations-Workflow
 
 
