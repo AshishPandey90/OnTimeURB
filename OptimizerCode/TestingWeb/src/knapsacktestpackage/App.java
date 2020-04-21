@@ -57,8 +57,7 @@ public JsonObjectBuilder initialize() {
 			JsonArrayBuilder greenArrayBuilder = Json.createArrayBuilder();
 			JsonArrayBuilder goldArrayBuilder = Json.createArrayBuilder();
 			
-			//get the most cost optimal solution
-			
+			//get the most cost optimal solution			
 			//RED SOLUTIONS		
 			redArrayBuilder.add(mod.solveModel(req_os, int_req_vCPU, dbl_req_ram, dbl_req_network, dbl_req_clock));
 			
