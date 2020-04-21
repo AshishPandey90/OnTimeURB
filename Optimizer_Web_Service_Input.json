@@ -8,5 +8,5 @@
 	"req_storage":"20",
 	"req_ssd":false,
 	"req_threshold":"100",
-	"req_preference":"req_os, req_ram,.."
+	"req_preference":"req_os, req_ram,."
 }
