@@ -11,21 +11,17 @@ public class ClassificationParam<T, K> {
     public ClassificationParam(Collection<T> featureset, K category) {
         this(featureset, category, 1.0f);
     }
-
     public ClassificationParam(Collection<T> featureset, K category, float probability) {
         this.featureset = featureset;
         this.category = category;
         this.probability = probability;
     }
-
     public Collection<T> getFeatureset() {
         return featureset;
     }
-
     public float getProbability() {
         return this.probability;
     }
-
     public K getCategory() {
         return category;
     }
