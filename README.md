@@ -26,10 +26,12 @@ d) *pyglidein* (python server-client pair for submitting HTCondor glidein jobs o
 
 Steps to be followed for configuration,
 ### On Submit Host Server
+
 a)	Install HTCondor personal edition
   --Download HTCondor 8.8.4 from: https://research.cs.wisc.edu/htcondor/downloads/
   --Install following the page https://research.cs.wisc.edu/htcondor/instructions/ubuntu/18/stable/
 Need to run this command before beginning: (sudo chmod 777 /etc/apt/sources.list)
+
 b)	Install Pegasus
   --Install without root access or follow the strategy above for HTCondor
     https://pegasus.isi.edu/downloads/
