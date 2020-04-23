@@ -78,6 +78,7 @@ i) Go to the out folder and check for job logs
 The optimizer engine is based on integer linear programming for selection of cloud node instances to compose cloud template solution.
 The engine is based on a knowledge base of instances from multiple cloud service providers in particular Amazon Web Services, GENI, Microsoft Azure, Google Cloud Platforms. The repository has the sample knowledge base files as AWS.json, AZURE.json, GCP.json, GENI.json
 Furthermore instance from the cloud platform providers can be added as json object to the files following the below format,
+
 {
   "csp":"GENI",  <*cloud platform name*>
   "OS":"LINUX",  <*type of operating system on the instance*> 
@@ -90,6 +91,7 @@ Furthermore instance from the cloud platform providers can be added as json obje
   "pricing_ssd":"0.10",  <*price of SSD storage with the cloud platform*>
   "pricing_hdd":"0.045"  <*price of HDD storage with the cloud platform*>
 }
+
 
 The optimizer engine source is attached with the repository, the optimizer engine has certain prerequisites in terms of softwares. Below are the prerequisites,
 a) Install latest JDK: https://www.javahelps.com/2019/04/install-latest-oracle-jdk-on-linux.html 
