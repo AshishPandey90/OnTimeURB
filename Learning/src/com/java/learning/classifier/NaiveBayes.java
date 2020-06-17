@@ -1,5 +1,4 @@
 package com.java.learning.classifier;
-
 import java.util.*;
 
 public class NaiveBayes<T, K> extends GenericClassifier<T, K> {
