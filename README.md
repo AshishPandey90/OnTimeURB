@@ -108,7 +108,7 @@ d) The signature of the web service to be called with the optimizer:
    
 e) The repository have attached file with the name "Optimizer_Web_Service_Input" & "Optimizer_Web_Service_Output" for expected input and    output to the optimizer web service.
 
-## Configuring and tuning the optimizer engine
+## Configuring and tuning the OnTimeURB optimizer engine
 The optimizer engine can be configured as per researcher using config.properties file. Below are the governing variables.
 
 a) Inputing possible supported operating system, it is used to validate knowledge base format \
