@@ -1,5 +1,10 @@
+# Purpose of project >> Intended Software Users / Audience
+ a) exactly what can be done with the softwares...orientaton/marketing material.
+ b) 
+ c) security concerns
+ 
 # OnTimeURB
-Graduate Research Project
+OnTimeURB Optimizer Project
 OnTimeURB stands for on time universal broker.
 This framework is created for configuring cloud infrastructure for scientfic/bioinformatics workflows. There are three components to this infrastructure deployment.
 
