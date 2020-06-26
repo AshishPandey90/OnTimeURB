@@ -82,7 +82,7 @@ Furthermore instance from the cloud platform providers can be added as json obje
 
 {
   "csp":"GENI",  <*cloud platform name*> \
-  "OS":"LINUX",  <*type of operating system on the instance*> \ 
+  "OS":"LINUX",  <*type of operating system on the instance*> \
   "name":"instageni.umkc_1", <*name of the instance*> \
   "vCPU":"1",    <*number of CPU cores*> \
   "ram":"1.5",   <*amount of RAM*> \
