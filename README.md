@@ -81,16 +81,16 @@ The engine is based on a knowledge base of instances from multiple cloud service
 Furthermore instance from the cloud platform providers can be added as json object to the files following the below format,
 
 {
-  "csp":"GENI",  <*cloud platform name*>
-  "OS":"LINUX",  <*type of operating system on the instance*> 
-  "name":"instageni.umkc_1", <*name of the instance*>
-  "vCPU":"1",    <*number of CPU cores*>
-  "ram":"1.5",   <*amount of RAM*>
-  "price":"0.0195", <*price of the instance per hour*>
-  "network":"5",    <*claimed network bandwidth*> 
-  "clock":"1.2",    <*cock speed of processor in GHz*>
-  "pricing_ssd":"0.10",  <*price of SSD storage with the cloud platform*>
-  "pricing_hdd":"0.045"  <*price of HDD storage with the cloud platform*>
+  "csp":"GENI",  <*cloud platform name*> \
+  "OS":"LINUX",  <*type of operating system on the instance*> \ 
+  "name":"instageni.umkc_1", <*name of the instance*> \
+  "vCPU":"1",    <*number of CPU cores*> \
+  "ram":"1.5",   <*amount of RAM*> \
+  "price":"0.0195", <*price of the instance per hour*> \
+  "network":"5",    <*claimed network bandwidth*> \
+  "clock":"1.2",    <*cock speed of processor in GHz*> \
+  "pricing_ssd":"0.10",  <*price of SSD storage with the cloud platform*> \
+  "pricing_hdd":"0.045"  <*price of HDD storage with the cloud platform*> \
 }
 
 
@@ -112,45 +112,45 @@ e) The repository have attached file with the name "Optimizer_Web_Service_Input"
 The optimizer engine can be configured as per researcher using config.properties file. Below are the governing variables.
 
 a) Inputing possible supported operating system \
-os = LINUX,RHEL,SLES,WINDOWS
+os = LINUX,RHEL,SLES,WINDOWS \
 
 b) knowledge base platforms \
 csp_files = AWS,GENI,GCP,AZURE
 
 c) Default configuration of user input for optimizer engine \
-req_os = LINUX
-req_vCPU = 1
-req_ram = 2
-req_network = 5
-req_clock = 2
-req_gpu = false
-req_storage = 10
-req_ssd = false
-req_threshold = 20
-req_preference = NA
+req_os = LINUX \
+req_vCPU = 1 \
+req_ram = 2 \
+req_network = 5 \
+req_clock = 2 \
+req_gpu = false \
+req_storage = 10 \
+req_ssd = false \
+req_threshold = 20 \
+req_preference = NA \
 
-d) is agility considered
-agility_enabled = false
+d) is agility considered \
+agility_enabled = false \
 
-e) default agility factor values for CSPS: AWS, GENI, GCP, AZURE
-ag_factor_aws = 10.0
-ag_factor_geni = 4.0
-ag_factor_gcp = 9.6
-ag_factor_azure = 8
+e) default agility factor values for CSPS: AWS, GENI, GCP, AZURE \
+ag_factor_aws = 10.0 \
+ag_factor_geni = 4.0 \
+ag_factor_gcp = 9.6 \
+ag_factor_azure = 8 \
 
-f) is machine learning enabled
-ml_enabled = false
-ml_default = true
+f) is machine learning enabled \
+ml_enabled = false \
+ml_default = true \
 
-g) default probability distribution if ml is enabled
-prob_factor_aws = 0.4
-prob_factor_geni = 0.1
-prob_factor_gcp = 0.2
-prob_factor_azure = 0.3
+g) default probability distribution if ml is enabled \
+prob_factor_aws = 0.4 \
+prob_factor_geni = 0.1 \
+prob_factor_gcp = 0.2 \
+prob_factor_azure = 0.3 \
 
 
-h) maximum price of any single instance from any cloud platform.
-max_instance_price = 5.424
+h) maximum price of any single instance from any cloud platform. \
+max_instance_price = 5.424 \
 
 
 ## Machine Learning Model
