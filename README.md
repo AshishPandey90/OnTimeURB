@@ -107,7 +107,10 @@ d) The signature of the web service to be called with the optimizer:
    http://<machine_IP>:<machine_Port>/TestingWeb/rest/getTemplateCatalog
    
 e) The repository have attached file with the name "Optimizer_Web_Service_Input" & "Optimizer_Web_Service_Output" for expected input and    output to the optimizer web service.
- 
- ## Machine Learning Model
+
+## Optimizer Engine
+Configuring and tuning the optimizer engine
+
+## Machine Learning Model
 
 The model is introduced as an aid to the optimizer engine to learn from previous application workflow executions and is implemented in java language. The prime objective of the model is to predict favorable cloud service platform (CSP) for executing certain application. The model tries to learn this from previous executions of the workflows and taking feedback from expert users for the corresponding cloud resource allocations. Since different users can have different priorities of CSPs for similar application workflows, this kind of learning should be classified based on probability, specifcally *naive bayes method* is implemented for classification. The probabilistic classification of selection of cloud platform can be used to bias the optimizer towards selecting specific platforms.
