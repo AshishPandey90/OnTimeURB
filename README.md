@@ -111,13 +111,13 @@ e) The repository have attached file with the name "Optimizer_Web_Service_Input"
 ## Configuring and tuning the optimizer engine
 The optimizer engine can be configured as per researcher using config.properties file. Below are the governing variables.
 
-a) Inputing possible supported operating system
+a) Inputing possible supported operating system \
 os = LINUX,RHEL,SLES,WINDOWS
 
-b) knowledge base platforms
+b) knowledge base platforms \
 csp_files = AWS,GENI,GCP,AZURE
 
-c) Default configuration of user input for optimizer engine
+c) Default configuration of user input for optimizer engine \
 req_os = LINUX
 req_vCPU = 1
 req_ram = 2
