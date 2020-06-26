@@ -156,3 +156,9 @@ max_instance_price = 5.424
 ## Machine Learning Model
 
 The model is introduced as an aid to the optimizer engine to learn from previous application workflow executions and is implemented in java language. The prime objective of the model is to predict favorable cloud service platform (CSP) for executing certain application. The model tries to learn this from previous executions of the workflows and taking feedback from expert users for the corresponding cloud resource allocations. Since different users can have different priorities of CSPs for similar application workflows, this kind of learning should be classified based on probability, specifcally *naive bayes method* is implemented for classification. The probabilistic classification of selection of cloud platform can be used to bias the optimizer towards selecting specific platforms.
+
+
+## Bioinformatics Workflows
+
+Please refer to https://github.com/tang27abu/Pegasus-Workflow
+
