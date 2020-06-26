@@ -1,6 +1,5 @@
 # OnTimeURB
 Graduate Research Project
-
 OnTimeURB stands for on time universal broker.
 This framework is created for configuring cloud infrastructure for scientfic/bioinformatics workflows. There are three components to this infrastructure deployment.
 
