@@ -2,6 +2,8 @@
  a) exactly what can be done with the softwares...orientaton/marketing material.
  b) 
  c) security concerns
+ d) spectrum of users from >> small scale lab (sys admins etc) to large scale CI enginers, multiple clouds, large clusters >> optimize which resource to use when all machines consdiered.
+ 
  
 # OnTimeURB
 OnTimeURB Optimizer Project
