@@ -1,6 +1,7 @@
 # Purpose of project >> Intended Software Users / Audience
  a) exactly what can be done with the softwares...orientaton/marketing material.
- b) 
+ b) Advantages, visual and graphics for config, configuration interface, content should be enough for webinar. Check CIPRES.  check with songjie.., put some marketing text showing variations in software usability. 
+ b.1) Test tutorial, buy credit??, reduced dependency
  c) security concerns
  d) spectrum of users from >> small scale lab (sys admins etc) to large scale CI enginers, multiple clouds, large clusters >> optimize which resource to use when all machines consdiered.
  
