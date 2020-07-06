@@ -6,6 +6,20 @@
  d) spectrum of users from >> small scale lab (sys admins etc) to large scale CI enginers, multiple clouds, large clusters >> optimize which resource to use when all machines consdiered.
  
  
+ This software enables researchers in better utilizing compute resources available with them at local servers as well resources allocations on public clou platforms. It gives reserachers flexibiltiy in creating hybrid cyber infrastruture for their applications requirements. The software have the capapbility of deducing real time the ideal compute  resources for application execution and stages the tasks on those respurces.  
+ 
+ We provide docker containers for enabling standalone web services of OnTimeURB with accessible user interface to help in resource brokering as per researchers requirement. We also provide a sample integration of OnTimeURb with bioinformatics workflows to show its effectivity throught docker containers.
+
+Add links to the containers. 
+Alignment workflow
+CNV workflow
+FastQC workflow
+Methylation workflow
+RNASeq workflow
+Pgen workflow. 
+ 
+ 
+ 
 # OnTimeURB
 OnTimeURB Optimizer Project
 OnTimeURB stands for on time universal broker.
