@@ -51,7 +51,11 @@ b) *Pegasus Workflow Management System*
 
 c) *HTCondor high throughput computing*
 
+![](Images/HtCondor.PNG)
+
 d) *pyglidein* (python server-client pair for submitting HTCondor glidein jobs on remote batch systems)
+
+![](Images/PyGlidein.PNG)
 
 Steps to be followed for configuration,
 ### On Submit Host Server
