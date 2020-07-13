@@ -22,7 +22,7 @@ d) Methylation workflow
 
 e) RNASeq workflow
 
-f) Pgen workflow. 
+f) PGen workflow. 
  
  
  
