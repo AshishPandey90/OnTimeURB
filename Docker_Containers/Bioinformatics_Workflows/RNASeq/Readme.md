@@ -1,6 +1,6 @@
 This folder contains details to enable RNASeq workflow on private machines using docker. Below are the steps to be followed to host the docker container.
 
-#RNASeq-Workflow
+# RNASeq-Workflow
 Below figure shows the pipeline of the workflow:
 
 ![](Images/rnaseq_wf.PNG)
@@ -11,12 +11,43 @@ docker pull apfd6/rnaseq_wf
 docker run apfd6/rnaseq_wf
 docker exec --user bamboo -it <ContainerId> bash
 
-#Configuring the container
+# Configuring the container
 
-Create User Credentials:
+## Create User Credentials:
 
 $ mkdir -p ~/.ssh
 $ ssh-keygen -t rsa -b 2048 -f ~/.ssh/workflow
   (just hit enter when asked for a passphrase)
 $ cat ~/.ssh/workflow.pub >>~/.ssh/authorized_keys
 
+## Initialize HTCondor
+
+cd condor-8.8.9
+. ./condor.sh
+condor_master
+
+## Initialize workflow configuration file
+Open .rnaseq-workflow.conf file and make below changes
+[cyverse]
+username = <your cyverse user name>
+
+## Initialize Cyverse connection file
+
+To access data from the iPlant iRods repository, you need a file in your home directory. The name and format of this file depends on if you are using a system with iRods version 3 or version 4. For version 3, you need a file named ~/irods.iplant.json, with 0600 permission and content as below:
+
+{
+    "irods_host": "data.iplantcollaborative.org",
+    "irods_port": 1247,
+    "irods_user_name": "YOUR_IRODS_USERNAME",
+    "irods_zone_name": "iplant",
+    "irodspassword": "YOUR_IRODS_PASSWORD"
+}
+
+$ chmod 0600 irods.iplant.json
+
+## Initialize Workflow
+cd rnaseq
+./workflow-generator --exec-env distributed
+
+
+This will start the workflow.
