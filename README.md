@@ -11,11 +11,17 @@
  We provide docker containers for enabling standalone web services of OnTimeURB with accessible user interface to help in resource brokering as per researchers requirement. We also provide a sample integration of OnTimeURb with bioinformatics workflows to show its effectivity throught docker containers. Docker containers for below workflows are available at OnTimeURB/Docker_Containers/Bioinformatics_Workflows/ with instructions to use them
 
 Bioinformatics Workflows. 
+
 a) Alignment workflow
+
 b) CNV workflow
+
 c) FastQC workflow
+
 d) Methylation workflow
+
 e) RNASeq workflow
+
 f) Pgen workflow. 
  
  
