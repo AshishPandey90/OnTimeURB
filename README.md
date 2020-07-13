@@ -39,7 +39,7 @@ c) Machine learning model to learn about performance variation incurred with exe
 
 d) Workflows are not included in this repository, but can be referered at Pgen workflow:https://github.com/pegasus-isi/PGen-GenomicVariations-Workflow
 
-![]{Images/OnTimeURB.PNG}
+![](Images/OnTimeURB.PNG)
 
 
 ## Configuring the infrastructure
