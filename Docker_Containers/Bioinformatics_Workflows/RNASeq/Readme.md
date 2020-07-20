@@ -15,9 +15,9 @@ docker pull apfd6/rnaseq_wf
 docker run apfd6/rnaseq_wf
 docker exec --user bamboo -it <ContainerId> bash
 
-# Configuring the container
+## Configuring the container
 
-## Create User Credentials:
+### Create User Credentials:
 
 $ mkdir -p ~/.ssh
 $ ssh-keygen -t rsa -b 2048 -f ~/.ssh/workflow
@@ -25,18 +25,18 @@ $ ssh-keygen -t rsa -b 2048 -f ~/.ssh/workflow
 $ cat ~/.ssh/workflow.pub >>~/.ssh/authorized_keys
 
 
-## Initialize HTCondor
+### Initialize HTCondor
 
 cd condor-8.8.9
 . ./condor.sh
 condor_master
 
-## Initialize workflow configuration file
+### Initialize workflow configuration file
 Open .rnaseq-workflow.conf file and make below changes
 [cyverse]
 username = <your cyverse user name>
 
-## Initialize Cyverse connection file
+### Initialize Cyverse connection file
 
 To access data from the iPlant iRods repository, you need a file in your home directory. The name and format of this file depends on if you are using a system with iRods version 3 or version 4. For version 3, you need a file named ~/irods.iplant.json, with 0600 permission and content as below:
 
@@ -50,7 +50,7 @@ To access data from the iPlant iRods repository, you need a file in your home di
 
 $ chmod 0600 irods.iplant.json
 
-## Initialize Workflow
+### Initialize Workflow
 cd rnaseq
 ./workflow-generator --exec-env distributed
 
