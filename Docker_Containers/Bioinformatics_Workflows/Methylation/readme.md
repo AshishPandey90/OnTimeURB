@@ -1,21 +1,22 @@
-Methylation workflow
 
-This folder contains details to enable RNASeq workflow on private machines using docker. Below are the steps to be followed to host the docker container.
+This folder contains details to enable Methylation workflow on private machines using docker. Below are the steps to be followed to host the docker container.
 
-# RNASeq-Workflow
+# Methylation-Workflow
 Below figure shows the pipeline of the workflow:
 
-![](Images/rnaseq_wf.PNG)
+![](Images/methylation_wf.PNG)
 
 
-RNA-Seq analysis workflow is used to perform quantification of gene expression from RNA-Seq transcriptomics data and statistical analysis to discover differential expressed genes/isoform between various experimental groups conditions. The paired-end or single-end reads are aligned to the reference genome via Tophat2. The mapped reads are summarized and aggregated over genes and isoforms for a particular organism’s gene and genome version to then calculate the gene expression FPKMs values via Cufflinks. Then, the transcriptome assembly generated from Cufflinks will be processed via Cuffcompare to perform these comparisons and assess the quality of assembly. Finally, genes and isoforms expressed differentially between the various pair wise comparisons within experimental groups/conditions are identified using Cuffdiff.
+DNA methylation is one of the main epigenetic modifications in the genome. We have developed the methylation workflow which meets variety of user analysis demands in an efficient and integrative manner. This workflow starts with raw sequence data (FASTQ files).   
+The input data for methylation workflow consists of high-throughput NGS bisulfite sequencing reads either single-end or paired-end. The reads are aligned back to the reference genome via BSMAP. The program To-mr is used to convert the output generated from the mapper to the MR format used in the next step. Before calculating methylation level, read duplicates are removed via Duplicate-remover. The methylation level for every cytosine site at single base resolution is estimated via Methcounts as a probability based on the ratio of methylated to total reads mapped to that loci. For some bisulfite sequencing project with multiple replicates, Merge-methcount will be used to merge those individual methcounts file to produce a single estimate that has higher coverage. Since symmetric methylation level is common for CpG methylation, the workflow will extract and merge symmetric GpG methylation levels via Symmetric-cpgs tool.   
+Various other methylation analysis results will be produced such as hypo-methylated regions (HMRs), hyper-methylated regions (HyperMR) and differentially methylated regions (DMR) between two methylomes. Hmr and Hypermr are used to identify the HMRs and hypermethlated regions. Finally, the DM regions between a pair or two small groups of methylomes will be identified via Methdiff and Dmr.   
 
 # Docker Container
 The docker container is availbale on DockerHub and can be downloaded and initialized by below steps,
 
 ```
-docker pull apfd6/rnaseq_wf  
-docker run apfd6/rnaseq_wf  
+docker pull apfd6/methylation_wf  
+docker run apfd6/methylation_wf  
 docker exec --user bamboo -it <ContainerId> bash  
 
 (move to home folder i.e. /home/bamboo)  
@@ -60,7 +61,7 @@ To access data from the iPlant iRods repository, you need a file in your home di
 $ chmod 0600 irods.iplant.json
 ```
 #### Initialize workflow configuration file
-Open .rnaseq-workflow.conf file and make below changes
+Open .methylation-workflow.conf file and make below changes
 ```
 [cyverse]
 username = <your cyverse user name>
