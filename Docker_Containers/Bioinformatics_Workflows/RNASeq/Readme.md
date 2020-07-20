@@ -11,9 +11,12 @@ RNA-Seq analysis workflow is used to perform quantification of gene expression f
 # Docker Container
 The docker container is availbale on DockerHub and can be downloaded and initialized by below steps,
 
-docker pull apfd6/rnaseq_wf
-docker run apfd6/rnaseq_wf
-docker exec --user bamboo -it <ContainerId> bash
+docker pull apfd6/rnaseq_wf  
+docker run apfd6/rnaseq_wf  
+docker exec --user bamboo -it <ContainerId> bash  
+
+(move to home folder i.e. /home/bamboo)
+cd ..  
 
 ## Configuring the container
 
