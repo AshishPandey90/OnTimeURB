@@ -8,6 +8,8 @@
 	* [Configuring Engine](https://github.com/AshishPandey90/OnTimeURB/blob/master/README.md#configuring-and-tuning-the-ontimeurb-optimizer-engine)  
 	* [Machine Learning Component](https://github.com/AshishPandey90/OnTimeURB/blob/master/README.md#machine-learning-model)  
 	* [Bioinformatics Workflows](https://github.com/AshishPandey90/OnTimeURB/blob/master/README.md#bioinformatics-workflows)  
+	* [How to use or launch OnTimeURB?](https://github.com/AshishPandey90/OnTimeURB/blob/master/README.md#how-to-use-or-launch-ontimeurb)  
+	* [To do list](https://github.com/AshishPandey90/OnTimeURB/blob/master/README.md#to-do-list)  
  
 
 # Purpose of project >> Intended Software Users / Audience
