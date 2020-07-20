@@ -1,21 +1,20 @@
-FastQC workflow
 
-This folder contains details to enable RNASeq workflow on private machines using docker. Below are the steps to be followed to host the docker container.
+This folder contains details to enable FastQC workflow on private machines using docker. Below are the steps to be followed to host the docker container.
 
-# RNASeq-Workflow
+# FastQC-Workflow
 Below figure shows the pipeline of the workflow:
 
-![](Images/rnaseq_wf.PNG)
+![](Images/fastqc_wf.PNG)
 
 
-RNA-Seq analysis workflow is used to perform quantification of gene expression from RNA-Seq transcriptomics data and statistical analysis to discover differential expressed genes/isoform between various experimental groups conditions. The paired-end or single-end reads are aligned to the reference genome via Tophat2. The mapped reads are summarized and aggregated over genes and isoforms for a particular organism’s gene and genome version to then calculate the gene expression FPKMs values via Cufflinks. Then, the transcriptome assembly generated from Cufflinks will be processed via Cuffcompare to perform these comparisons and assess the quality of assembly. Finally, genes and isoforms expressed differentially between the various pair wise comparisons within experimental groups/conditions are identified using Cuffdiff.
+FastQC workflow is used to conduct quality control checks on raw NGS data coming from high-throughput sequencing projects, to ensure that the data looks good and there are no problems or biases which may affect its further downstream analysis and use. The input to FastQC is FASTQ file. The output from FastQC, after analyzing a FASTQ file of sequence reads, is a HTML file that may be viewed in a user's browser. The report contains results section for each FastQC module. In addition, graphical and list data are provided by each module, a flag of “Passed”, “Warn” or “Fail” is assigned.
 
 # Docker Container
 The docker container is availbale on DockerHub and can be downloaded and initialized by below steps,
 
 ```
-docker pull apfd6/rnaseq_wf  
-docker run apfd6/rnaseq_wf  
+docker pull apfd6/fastqc_wf  
+docker run apfd6/fastqc_wf  
 docker exec --user bamboo -it <ContainerId> bash  
 
 (move to home folder i.e. /home/bamboo)  
@@ -60,7 +59,7 @@ To access data from the iPlant iRods repository, you need a file in your home di
 $ chmod 0600 irods.iplant.json
 ```
 #### Initialize workflow configuration file
-Open .rnaseq-workflow.conf file and make below changes
+Open .fastqc-workflow.conf file and make below changes
 ```
 [cyverse]
 username = <your cyverse user name>
