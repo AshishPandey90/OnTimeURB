@@ -216,7 +216,7 @@ c) FastQC workflow
 
 d) Methylation workflow
 
-e) [RNASeq workflow](../Docker_Containers/Bioinformatics_Workflows/RNASeq/Readme.md)
+e) [RNASeq workflow](../Docker_Containers/Bioinformatics_Workflows/RNASeq)
 
 f) PGen workflow.
 
