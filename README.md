@@ -1,5 +1,5 @@
 # Table of Contents
-- [Example 1 Heading](###Example-1-Heading)(www.google.com)
+- [Example 1 Heading](###Example-1-Heading)
  
 
 # Purpose of project >> Intended Software Users / Audience
