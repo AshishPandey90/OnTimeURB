@@ -44,11 +44,11 @@ $ cat ~/.ssh/workflow.pub >>~/.ssh/authorized_keys
 To access data from the iPlant iRods repository, you need a file in your home directory. The name and format of this file depends on if you are using a system with iRods version 3 or version 4. For version 3, you need a file named ~/irods.iplant.json, with 0600 permission and content as below:
 
 {
-    "irods_host": "data.iplantcollaborative.org",
-    "irods_port": 1247,
-    "irods_user_name": "YOUR_IRODS_USERNAME",
-    "irods_zone_name": "iplant",
-    "irodspassword": "YOUR_IRODS_PASSWORD"
+    "irods_host": "data.iplantcollaborative.org",  
+    "irods_port": 1247,  
+    "irods_user_name": "YOUR_IRODS_USERNAME",  
+    "irods_zone_name": "iplant",  
+    "irodspassword": "YOUR_IRODS_PASSWORD"  
 }
 
 $ chmod 0600 irods.iplant.json
