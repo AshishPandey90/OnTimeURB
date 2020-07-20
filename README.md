@@ -14,13 +14,22 @@
 
 # Purpose of project >> Intended Software Users / Audience
  a) exactly what can be done with the softwares...orientaton/marketing material.  
+ This software enables researchers in better utilizing compute resources available with them at local servers as well resources allocations on public clou platforms. It gives reserachers flexibiltiy in creating hybrid cyber infrastruture for their applications requirements. The software have the capapbility of deducing real time the ideal compute  resources for application execution and stages the tasks on those respurces.
+ 
+ 
+ 
+ 
  b) Advantages, visual and graphics for config, configuration interface, content should be enough for webinar. Check CIPRES.  check with songjie.., put some marketing text showing variations in software usability.   
  b.1) Test tutorial, buy credit??, reduced dependency
+ 
+ 
  c) security concerns  
+ 
+ 
  d) spectrum of users from >> small scale lab (sys admins etc) to large scale CI enginers, multiple clouds, large clusters >> optimize which resource to use when all machines consdiered.
  
  
- This software enables researchers in better utilizing compute resources available with them at local servers as well resources allocations on public clou platforms. It gives reserachers flexibiltiy in creating hybrid cyber infrastruture for their applications requirements. The software have the capapbility of deducing real time the ideal compute  resources for application execution and stages the tasks on those respurces.  
+   
  
  We provide docker containers for enabling standalone web services of OnTimeURB with accessible user interface to help in resource brokering as per researchers requirement. We also provide a sample integration of OnTimeURb with bioinformatics workflows to show its effectivity throught docker containers.  
  
