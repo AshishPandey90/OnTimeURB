@@ -208,17 +208,17 @@ Docker containers for below workflows are available at OnTimeURB/Docker_Containe
 
 Bioinformatics Workflows. 
 
-a) Alignment workflow
+a) [Alignment workflow](./Docker_Containers/Bioinformatics_Workflows/Alignment)  
 
-b) CNV workflow
+b) [CNV workflow](./Docker_Containers/Bioinformatics_Workflows/CNV)  
 
-c) FastQC workflow
+c) [FastQC workflow](./Docker_Containers/Bioinformatics_Workflows/FastQC)  
 
-d) Methylation workflow
+d) [Methylation workflow](./Docker_Containers/Bioinformatics_Workflows/Methylation)  
 
-e) [RNASeq workflow](./Docker_Containers/Bioinformatics_Workflows/RNASeq)
+e) [RNASeq workflow](./Docker_Containers/Bioinformatics_Workflows/RNASeq)  
 
-f) PGen workflow.
+f) [PGen workflow.](./Docker_Containers/Bioinformatics_Workflows/PGen)  
 
 
 ## How to use or launch OnTimeURB?
