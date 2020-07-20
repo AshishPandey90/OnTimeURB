@@ -1,21 +1,20 @@
-PGen workflow
 
-This folder contains details to enable RNASeq workflow on private machines using docker. Below are the steps to be followed to host the docker container.
+This folder contains details to enable PGen workflow on private machines using docker. Below are the steps to be followed to host the docker container.
 
-# RNASeq-Workflow
+# PGen-Workflow
 Below figure shows the pipeline of the workflow:
 
 ![](Images/rnaseq_wf.PNG)
 
 
-RNA-Seq analysis workflow is used to perform quantification of gene expression from RNA-Seq transcriptomics data and statistical analysis to discover differential expressed genes/isoform between various experimental groups conditions. The paired-end or single-end reads are aligned to the reference genome via Tophat2. The mapped reads are summarized and aggregated over genes and isoforms for a particular organism’s gene and genome version to then calculate the gene expression FPKMs values via Cufflinks. Then, the transcriptome assembly generated from Cufflinks will be processed via Cuffcompare to perform these comparisons and assess the quality of assembly. Finally, genes and isoforms expressed differentially between the various pair wise comparisons within experimental groups/conditions are identified using Cuffdiff.
+PGen workflow is used to efficiently facilitate large-scale NGS data analysis of genomic variations. The workflow allows users to identify single nucleotide polymorphisms (SNPs) and insertion-deletions (Indels), perform SNP annotation and conduct copy number variation (CNV) analyses on multiple resequencing datasets. PGen workflow is developed using many widely accepted open-source NGS tools for alignment of reads, variants calling, variants filtration, VCF merging and others. The workflow starts by aligning either paired-end or single-end FASTQ reads against the organisms reference genome using BWA. Picard Tools is also used at this step to locate duplicate molecules and assign all reads into groups with the default parameters. After alignment, SNPs and Indels are called using the Haplotype Caller algorithm from Genome Analysis Toolkit (GATK). Filtering criteria are defined in INFO filed in vcf file, where QD stands for quality by depth, FS is Fisher strand values and MQ is mapping quality of variants.  Detected variants were then filtered using criteria QD 	$<$ 26.0 $||$ FS $>$ 60.0 $||$ MQ $<$ 40.0 for SNPs and DQ $<$ 26.0 $||$ FS $>$ 200.0 $||$ MQ $<$ 40.0 for indels. Custom criteria can also be applied by the user. Outputs are generated as BAM and VCF standard formats. In the filtering step, only the SNPs and Indels are considered; however other types of variants can extracted from the generated unfiltered files.
 
 # Docker Container
 The docker container is availbale on DockerHub and can be downloaded and initialized by below steps,
 
 ```
-docker pull apfd6/rnaseq_wf  
-docker run apfd6/rnaseq_wf  
+docker pull apfd6/pgen_wf  
+docker run apfd6/pgen_wf  
 docker exec --user bamboo -it <ContainerId> bash  
 
 (move to home folder i.e. /home/bamboo)  
@@ -60,7 +59,7 @@ To access data from the iPlant iRods repository, you need a file in your home di
 $ chmod 0600 irods.iplant.json
 ```
 #### Initialize workflow configuration file
-Open .rnaseq-workflow.conf file and make below changes
+Open .pgen-workflow.conf file and make below changes
 ```
 [cyverse]
 username = <your cyverse user name>
