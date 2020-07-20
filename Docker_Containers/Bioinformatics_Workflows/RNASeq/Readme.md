@@ -3,7 +3,7 @@ This folder contains details to enable RNASeq workflow on private machines using
 # RNASeq-Workflow
 Below figure shows the pipeline of the workflow:
 
-![](Images/rnaseq.PNG)
+![](Images/rnaseq_wf.PNG)
 
 
 RNA-Seq analysis workflow is used to perform quantification of gene expression from RNA-Seq transcriptomics data and statistical analysis to discover differential expressed genes/isoform between various experimental groups conditions. The paired-end or single-end reads are aligned to the reference genome via Tophat2. The mapped reads are summarized and aggregated over genes and isoforms for a particular organism’s gene and genome version to then calculate the gene expression FPKMs values via Cufflinks. Then, the transcriptome assembly generated from Cufflinks will be processed via Cuffcompare to perform these comparisons and assess the quality of assembly. Finally, genes and isoforms expressed differentially between the various pair wise comparisons within experimental groups/conditions are identified using Cuffdiff.
