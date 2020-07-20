@@ -74,4 +74,15 @@ cd rnaseq
 ./workflow-generator --exec-env distributed
 ```
 
-This will start the workflow.
+### Running and Monitoring the workflow
+
+Note that when Pegasus plans/submits a workflow, a work directory is created and presented in the output. This directory is the handle to the workflow instance and used by Pegasus command line tools. The first tool to use is pegasus-run, which will start the workflow:  
+
+pegasus-run [wfdir]  
+Some useful tools to know about:  
+
+pegasus-status -v [wfdir] - Provides status on a currently running workflow.  
+pegasus-analyzer [wfdir] - Provides debugging clues why a workflow failed. Run this after a workflow has failed.  
+pegasus-statistics [wfdir] - Provides statistics, such as walltimes, on a workflow after it has completed.  
+pegasus-remove [wfdir] - Removes a workflow from the system.  
+
