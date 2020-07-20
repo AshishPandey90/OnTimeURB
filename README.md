@@ -20,21 +20,7 @@
  
  This software enables researchers in better utilizing compute resources available with them at local servers as well resources allocations on public clou platforms. It gives reserachers flexibiltiy in creating hybrid cyber infrastruture for their applications requirements. The software have the capapbility of deducing real time the ideal compute  resources for application execution and stages the tasks on those respurces.  
  
- We provide docker containers for enabling standalone web services of OnTimeURB with accessible user interface to help in resource brokering as per researchers requirement. We also provide a sample integration of OnTimeURb with bioinformatics workflows to show its effectivity throught docker containers. Docker containers for below workflows are available at OnTimeURB/Docker_Containers/Bioinformatics_Workflows/ with instructions to use them
-
-Bioinformatics Workflows. 
-
-a) Alignment workflow
-
-b) CNV workflow
-
-c) FastQC workflow
-
-d) Methylation workflow
-
-e) RNASeq workflow
-
-f) PGen workflow. 
+ We provide docker containers for enabling standalone web services of OnTimeURB with accessible user interface to help in resource brokering as per researchers requirement. We also provide a sample integration of OnTimeURb with bioinformatics workflows to show its effectivity throught docker containers.  
  
  
 # OnTimeURB
@@ -206,4 +192,20 @@ The model is introduced as an aid to the optimizer engine to learn from previous
 ## Bioinformatics Workflows
 
 Please refer to https://github.com/tang27abu/Pegasus-Workflow
+
+Docker containers for below workflows are available at OnTimeURB/Docker_Containers/Bioinformatics_Workflows/ with instructions to use them
+
+Bioinformatics Workflows. 
+
+a) Alignment workflow
+
+b) CNV workflow
+
+c) FastQC workflow
+
+d) Methylation workflow
+
+e) RNASeq workflow
+
+f) PGen workflow.
 
