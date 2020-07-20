@@ -12,20 +12,26 @@
 	* [To do list](https://github.com/AshishPandey90/OnTimeURB/blob/master/README.md#to-do-list)  
  
 
-# OnTimeURB >> Purpose of project: Intended Software Users / Audience
+# OnTimeURB
  a) exactly what can be done with the softwares...orientaton/marketing material.  
- This software enables researchers in better utilizing compute resources available with them at local servers as well resources allocations on public clou platforms. It gives reserachers flexibiltiy in creating hybrid cyber infrastruture for their applications requirements. The software have the capapbility of deducing real time the ideal compute  resources for application execution and stages the tasks on those respurces.
+ This software enables researchers in better utilizing compute resources available with them at local servers as well resources allocations on public cloud platforms. It gives researchers flexibiltiy in creating hybrid cyber infrastruture for their applications requirements. The software have the capapbility of deducing in real time the ideal compute resources allocations for application execution and stages the tasks on those resources.
  
  
- b) Advantages, visual and graphics for config, configuration interface, content should be enough for webinar. Check CIPRES.  check with songjie.., put some marketing text showing variations in software usability.   
+ ## Advantages, 
+A large spectrum of reaserachers can use the software,   
+1. It is ideal for researchers from small scale lab (sys admins etc) who do not have enough inhouse compute resources but wish to use public or community cloud resources optionally.  
+2. Large scale cyber infrastucture engineers can leverage multiple clouds simulatneously to create large clusters of machine for analyzing big data (~100Gbs).
+3. Optimal resource allocations/recommendations depending on user requirements of performance. agility, cost and security (PACS). 
+ 
+ ## Visual and graphics for config, 
+ 
+ ##configuration interface 
+ Content should be enough for webinar. Check CIPRES.  check with songjie.., put some marketing text showing variations in software usability.   
  b.1) Test tutorial, buy credit??, reduced dependency
  
- 
  c) security concerns  
- 
- 
- d) spectrum of users from >> small scale lab (sys admins etc) to large scale CI enginers, multiple clouds, large clusters >> optimize which resource to use when all machines consdiered.
- 
+ The software executes based on SSh Keys credentials. A single SSH key is which is generated at time of initialization of the software and cluster of machine is used throughout the cluster to access resources. 
+
  
  We provide docker containers for enabling standalone web services of OnTimeURB with accessible user interface to help in resource brokering as per researchers requirement. We also provide a sample integration of OnTimeURb with bioinformatics workflows to show its effectivity throught docker containers.  
  
