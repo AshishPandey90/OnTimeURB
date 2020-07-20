@@ -1,21 +1,19 @@
-CNV workflow
 
-This folder contains details to enable RNASeq workflow on private machines using docker. Below are the steps to be followed to host the docker container.
+This folder contains details to enable CNV workflow on private machines using docker. Below are the steps to be followed to host the docker container.
 
-# RNASeq-Workflow
+# CNV-Workflow
 Below figure shows the pipeline of the workflow:
 
-![](Images/rnaseq_wf.PNG)
+![](Images/cnv_wf.PNG)
 
-
-RNA-Seq analysis workflow is used to perform quantification of gene expression from RNA-Seq transcriptomics data and statistical analysis to discover differential expressed genes/isoform between various experimental groups conditions. The paired-end or single-end reads are aligned to the reference genome via Tophat2. The mapped reads are summarized and aggregated over genes and isoforms for a particular organism’s gene and genome version to then calculate the gene expression FPKMs values via Cufflinks. Then, the transcriptome assembly generated from Cufflinks will be processed via Cuffcompare to perform these comparisons and assess the quality of assembly. Finally, genes and isoforms expressed differentially between the various pair wise comparisons within experimental groups/conditions are identified using Cuffdiff.
+Copy number variation (CNVs) workflow is used to perform efficient analysis to detect CNVs in the form of gains and losses, from NGS reads. CNV workflow requires user to input a reference sequence and one or multiple sample/condition sequences which should be in BAM format. First, Samtools will extract the map locations from each mapped sequence reads. Outputs are generated in a hits format file which is required for next step as the input of CNV-Seq. The CNVs will be detected also with the confidence values selected by user.
 
 # Docker Container
 The docker container is availbale on DockerHub and can be downloaded and initialized by below steps,
 
 ```
-docker pull apfd6/rnaseq_wf  
-docker run apfd6/rnaseq_wf  
+docker pull apfd6/cnv_wf  
+docker run apfd6/cnv_wf  
 docker exec --user bamboo -it <ContainerId> bash  
 
 (move to home folder i.e. /home/bamboo)  
@@ -60,7 +58,7 @@ To access data from the iPlant iRods repository, you need a file in your home di
 $ chmod 0600 irods.iplant.json
 ```
 #### Initialize workflow configuration file
-Open .rnaseq-workflow.conf file and make below changes
+Open .cnv-workflow.conf file and make below changes
 ```
 [cyverse]
 username = <your cyverse user name>
