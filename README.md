@@ -202,9 +202,9 @@ The [machine learning model](./Learning) is introduced as an aid to the optimize
 
 ## Bioinformatics Workflows
 
-Please refer to https://github.com/tang27abu/Pegasus-Workflow
+Please refer to https://github.com/tang27abu/Pegasus-Workflow for source code to the applications workflows.
 
-Docker containers for below workflows are available at OnTimeURB/Docker_Containers/Bioinformatics_Workflows/ with instructions to use them
+Docker containers for below workflows are available with instructions to use them
 
 Bioinformatics Workflows. 
 
