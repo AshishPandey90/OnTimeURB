@@ -1,6 +1,13 @@
 # Table of Contents  
 * [OnTimeURB](https://github.com/AshishPandey90/OnTimeURB/blob/master/README.md#purpose-of-project--intended-software-users--audience)  
-   * [OnTimeURB](https://github.com/AshishPandey90/OnTimeURB/blob/master/README.md#purpose-of-project--intended-software-users--audience)  
+   * [Component Diagram](https://github.com/AshishPandey90/OnTimeURB/blob/master/README.md#ontimeurb)
+   * [Configuring Tools](https://github.com/AshishPandey90/OnTimeURB/blob/master/README.md#configuring-the-infrastructure)
+		* [Client Server](https://github.com/AshishPandey90/OnTimeURB/blob/master/README.md#on-client-server)  
+		* [Submit Server](https://github.com/AshishPandey90/OnTimeURB/blob/master/README.md#on-submit-host-server)  
+	* [Optimizer Engine](https://github.com/AshishPandey90/OnTimeURB/blob/master/README.md#optimizer-engine)  
+	* [Configuring Engine](https://github.com/AshishPandey90/OnTimeURB/blob/master/README.md#configuring-and-tuning-the-ontimeurb-optimizer-engine)  
+	* [Machine Learning Component](https://github.com/AshishPandey90/OnTimeURB/blob/master/README.md#machine-learning-model)  
+	* [Bioinformatics Workflows](https://github.com/AshishPandey90/OnTimeURB/blob/master/README.md#bioinformatics-workflows)  
  
 
 # Purpose of project >> Intended Software Users / Audience
