@@ -22,18 +22,19 @@ A large spectrum of reaserachers can use the software,
 1. It is ideal for researchers from small scale lab (sys admins etc) who do not have enough inhouse compute resources but wish to use public or community cloud resources optionally.  
 2. Large scale cyber infrastucture engineers can leverage multiple clouds simulatneously to create large clusters of machine for analyzing big data (~100Gbs).
 3. Optimal resource allocations/recommendations depending on user requirements of performance. agility, cost and security (PACS). 
+4. Compatible with workflows created from Pegasus workflow managemnent system.
  
  ## Visual and graphics for config, 
  
- ##configuration interface 
+ ## Configuration interface 
  Content should be enough for webinar. Check CIPRES.  check with songjie.., put some marketing text showing variations in software usability.   
  b.1) Test tutorial, buy credit??, reduced dependency
  
- c) security concerns  
+ ## Security concerns  
  The software executes based on SSh Keys credentials. A single SSH key is which is generated at time of initialization of the software and cluster of machine is used throughout the cluster to access resources. 
 
  
- We provide docker containers for enabling standalone web services of OnTimeURB with accessible user interface to help in resource brokering as per researchers requirement. We also provide a sample integration of OnTimeURb with bioinformatics workflows to show its effectivity throught docker containers.  
+We provide docker containers for enabling standalone web services of OnTimeURB with accessible user interface to help in resource brokering as per researchers requirement. We also provide a sample integration of OnTimeURb with bioinformatics workflows to show its effectivity throught docker containers.  
  
  
 # OnTimeURB Components
