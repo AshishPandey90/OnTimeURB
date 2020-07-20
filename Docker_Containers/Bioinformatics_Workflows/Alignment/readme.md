@@ -1,21 +1,21 @@
-Alignment workflow
 
-This folder contains details to enable RNASeq workflow on private machines using docker. Below are the steps to be followed to host the docker container.
 
-# RNASeq-Workflow
+This folder contains details to enable Alignment workflow on private machines using docker. Below are the steps to be followed to host the docker container.
+
+# Alignment-Workflow
 Below figure shows the pipeline of the workflow:
 
-![](Images/rnaseq_wf.PNG)
+![](Images/Alignment_wf.PNG)
 
 
-RNA-Seq analysis workflow is used to perform quantification of gene expression from RNA-Seq transcriptomics data and statistical analysis to discover differential expressed genes/isoform between various experimental groups conditions. The paired-end or single-end reads are aligned to the reference genome via Tophat2. The mapped reads are summarized and aggregated over genes and isoforms for a particular organism’s gene and genome version to then calculate the gene expression FPKMs values via Cufflinks. Then, the transcriptome assembly generated from Cufflinks will be processed via Cuffcompare to perform these comparisons and assess the quality of assembly. Finally, genes and isoforms expressed differentially between the various pair wise comparisons within experimental groups/conditions are identified using Cuffdiff.
+Alignment workflow is used to align NGS data or RNA-Seq reads to reference genome. The workflow starts with building the Bowtie index from a set of DNA sequences (FASTQ/FA) for a particular organism using Bowtie2. A set of 6 files with suffixes 'ebwt' are generated as outputs. The NGS reads will be aligned against the reference genome sequence using Tophat2 to identify exon-intron splice junctions. The outputs are in 'BAM' format files.
 
 # Docker Container
 The docker container is availbale on DockerHub and can be downloaded and initialized by below steps,
 
 ```
-docker pull apfd6/rnaseq_wf  
-docker run apfd6/rnaseq_wf  
+docker pull apfd6/alignment_wf  
+docker run apfd6/alignment_wf  
 docker exec --user bamboo -it <ContainerId> bash  
 
 (move to home folder i.e. /home/bamboo)  
@@ -60,7 +60,7 @@ To access data from the iPlant iRods repository, you need a file in your home di
 $ chmod 0600 irods.iplant.json
 ```
 #### Initialize workflow configuration file
-Open .rnaseq-workflow.conf file and make below changes
+Open .alignment-workflow.conf file and make below changes
 ```
 [cyverse]
 username = <your cyverse user name>
