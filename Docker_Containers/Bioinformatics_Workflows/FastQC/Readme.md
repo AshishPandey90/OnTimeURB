@@ -66,8 +66,19 @@ username = <your cyverse user name>
 ```
 
 ### Inputs to workflow
+**inputs-fastq.txt**
+
+URLs are given in the **irods:///[path]/[filename]** format. 
+
+For example, to specify file **/iplant/home/zl7w2/readsleft.fq** use:
+```
+irods:///iplant/home/zl7w2/readsleft.fq
+```
+Do not use comments or whitespace in the file. Make sure you have the permission of the data, you could check from the [https://de.cyverse.org/de/](https://de.cyverse.org/de/)
 
 ### Outputs of workflow
+
+Workflow generates the fastqc report for each fastq file.
 
 ### Initialize Workflow
 ```

@@ -67,12 +67,11 @@ username = <your cyverse user name>
 ```
 
 ### Inputs to workflow
-
 **inputs-fastq.txt**
 
 URLs are given in the **irods:///[path]/[filename]** format. 
 
-For example, to specify file **/iplant/home/shared/digbio/SoyKB/PGen_workflow/SRR1209394.fastq.gz** use:
+For example, to specify file **/iplant/home/zl7w2/readsleft.fq** use:
 ```
 irods:///iplant/home/zl7w2/readsleft.fq
 ```

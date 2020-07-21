@@ -65,8 +65,28 @@ username = <your cyverse user name>
 ```
 
 ### Inputs to workflow
+**inputs-bam.txt**
+
+The list of bam file need to be compared to the reference bam file.
+URLs are given in the **irods:///[path]/[filename]** format. 
+
+For example, to specify file **/iplant/home/zl7w2/ERR986083_sorted_reads.bam** use:
+```
+irods:///iplant/home/zl7w2/ERR986083_sorted_reads.bam
+```
+Do not use comments or whitespace in the file. Make sure you have the permission of the data, you could check from the [https://de.cyverse.org/de/](https://de.cyverse.org/de/)
+
+**inputs-ref.txt**
+
+Specify the reference bam file that each bam file in the **inputs-bam.txt** compared with.
+```
+irods:///iplant/home/zl7w2/ERR986082_sorted_reads.bam
+```
 
 ### Outputs of workflow
+- Map locations .hits file
+- Count value of each map location for test and ref case  .count file
+- CNV with log2 fold change and p-value .cnv file
 
 ### Initialize Workflow
 ```
