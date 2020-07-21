@@ -99,10 +99,10 @@ output_dir = /iplant/home/zl7w2/output
 ### Outputs of workflow
 Workflow generates 
 - index reference genome **ref.tar**
-- binary alignment map (BAM) files **tophat_c*_r*.tar**
-- cufflinks results - FPKM **cufflinks_c*_r*.tar**
-- cuffcompare results - transcript file **cuffcompare_s*_s*.combined.gtf**
-- cuffdiff results - differntial expression **cuffdiff_s*s***
+- binary alignment map (BAM) files **tophat_c0_r0.tar**
+- cufflinks results - FPKM **cufflinks_c0_r0.tar**
+- cuffcompare results - transcript file **cuffcompare_s0_s1.combined.gtf**
+- cuffdiff results - differntial expression **cuffdiff_s0s1.tar**
   - cds.count_tracking
   - cds.fpkm_tracking
   - cds.read_group_tracking
@@ -119,7 +119,7 @@ Workflow generates
   - tss.fpkm_tracking
   - tss.read_group_tracking
   - tss_exp.diff
-  
+
 ### Initialize Workflow
 ```
 cd rnaseq
