@@ -67,7 +67,72 @@ username = <your cyverse user name>
 
 ### Inputs to workflow
 
-### Outputs of workflow
+Specifying input data is done in two files inputs-fastq.txt and inputs-ref.txt.
+
+**inputs-fastq.txt**
+
+URLs are given in the irods://[resource]/[path] format. For example, to specify file /iplant/home/shared/digbio/SoyKB/PGen_workflow/SRR1209394.fastq.gz use:
+
+```
+irods:///iplant/home/shared/digbio/SoyKB/NGS_workflow/SRR1209394.fastq.gz
+```
+
+Do not use comments or whitespace in the file. Make sure you have the permission of the data, you could check from the https://de.iplantcollaborative.org/de/
+
+**inputs-refs.txt**
+
+Reference genome should be in fasta format and it should be a zipped file. For example,
+irods://taccCorralRes/iplant/home/shared/digbio/SoyKB/PGen_workflow/Zmays_284_AGPv3.gz
+
+**Single-end or pair-end fastq inputs**
+
+Make sure to specify your input data type (pair or single), and change it in *main.conf* file as below:
+
+```
+$ cd ~/PGen-GenomicVariations-Workflow/conf/
+$ cat main.conf
+# single-end or pair-end
+inputs-style = pair-end
+```
+
+**chromosomes.txt**
+
+This input file saves the list of chromosomes for alignment and snp calling; user can make their own list according to the reference.
+
+```
+zcat reference.fa.gz | grep “>”  > chromosome.txt 
+```
+
+## Outputs of workflow:
+
+Workflow generates bam, vcf and mergeGVCF output files. mergeGVCF can be used for future merge if needed. All outputs will be automatically transferred to iPlant data store during the workflow process named after workflow submission date.
+For example if we have ‘SRR1209394.fastq.gz’as the input, workflow will generate below files as the outputs.
+
+```
+SRR1209394 _addrepl.bai
+SRR1209394 _addrepl.bam
+SRR1209394 _indel_realigned.bai
+SRR1209394_indel_realigned.bam
+Submission_date-All.vcf
+Submission_date-All.vcf.idx
+Submission_date-All_filtered_indel.vcf
+Submission_date-All_filtered_indel.vcf.idx
+Submission_date-All_filtered_snp.vcf
+Submission_date-All_filtered_snp.vcf.idx
+Submission_date-mergeGVCF.vcf
+Submission_date-mergeGVCF.vcf.idx
+```
+
+## SNP Filtration Criteria
+
+Default filtration for snps and indels:
+
+```
+snp_filter = QD < 2.0 || FS > 60.0 || MQ < 40.0
+indel_filter = QD < 2.0 || FS > 200.0 || MQ < 40
+```
+
+Different filtration can be used and changed in ‘main.conf’ file by editing ‘snp_filter’ and ‘indel-filter‘ parameters. (http://gatkforums.broadinstitute.org/discussion/2806/howto-apply-hard-filters-to-a-call-set )
 
 ### Initialize Workflow
 ```
