@@ -101,7 +101,7 @@ output_dir = /iplant/home/zl7w2/output
 
 ### Outputs of workflow
 
-Workflow generates index reference genome and binary alignment map (BAM) file.
+Workflow generates index reference genome and binary alignment map (BAM) files.
 
 
 ### Initialize Workflow
