@@ -71,6 +71,7 @@ username = <your cyverse user name>
 **inputs-fastq.txt**
 
 URLs are given in the **irods:///[path]/[filename]** format. 
+
 For example, to specify file **/iplant/home/shared/digbio/SoyKB/PGen_workflow/SRR1209394.fastq.gz** use:
 ```
 irods:///iplant/home/zl7w2/readsleft.fq
@@ -78,16 +79,19 @@ irods:///iplant/home/zl7w2/readsleft.fq
 Do not use comments or whitespace in the file. Make sure you have the permission of the data, you could check from the [https://de.cyverse.org/de/](https://de.cyverse.org/de/)
 
 **inputs-ref.txt**
+
 Reference genome should be in fasta format. For example, 
 ```
 irods:///iplant/home/zl7w2/Gmax_275_v2.0.ch1.fa
 ```
 **inputs-gtf.txt**
+
 Reference genome should be in fasta format. For example, 
 ```
 irods:///iplant/home/zl7w2/Gmax_275_Wm82.a2.v1.gene.gtf
 ```
 **main.conf**
+
 Specify your input data type (pair or single) and output folder in main.conf as below:
 ```
 #single-end or paired-end
@@ -95,8 +99,10 @@ inputs-style = paired-end
 output_dir = /iplant/home/zl7w2/output
 ```
 
-
 ### Outputs of workflow
+
+Workflow generates index reference genome and binary alignment map (BAM) file.
+
 
 ### Initialize Workflow
 ```
