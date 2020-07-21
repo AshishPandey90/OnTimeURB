@@ -83,6 +83,15 @@ Specify the reference bam file that each bam file in the **inputs-bam.txt** comp
 irods:///iplant/home/zl7w2/ERR986082_sorted_reads.bam
 ```
 
+**main.conf**
+Specify the output folder and p-value, log2 criteria
+```
+output_dir = /iplant/home/zl7w2/output
+# configuration
+log2 = 0.6
+pvalue = 0.001
+```
+
 ### Outputs of workflow
 - Map locations .hits file
 - Count value of each map location for test and ref case  .count file
