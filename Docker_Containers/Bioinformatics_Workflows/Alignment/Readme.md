@@ -5,7 +5,7 @@ This folder contains details to enable Alignment workflow on private machines us
 # Alignment-Workflow
 Below figure shows the pipeline of the workflow:
 
-![](/OnTimeURB/Images/Alignment_wf.png)
+![Alignment](/OnTimeURB/Images/Alignment_wf.png)
 
 
 Alignment workflow is used to align NGS data or RNA-Seq reads to reference genome. The workflow starts with building the Bowtie index from a set of DNA sequences (FASTQ/FA) for a particular organism using Bowtie2. A set of 6 files with suffixes 'ebwt' are generated as outputs. The NGS reads will be aligned against the reference genome sequence using Tophat2 to identify exon-intron splice junctions. The outputs are in 'BAM' format files.
