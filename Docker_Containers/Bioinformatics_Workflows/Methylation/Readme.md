@@ -69,7 +69,60 @@ username = <your cyverse user name>
 
 ### Inputs to workflow
 
+**inputs-fastq.txt**
+
+URLs are given in the **irods:///[path]/[filename]** format. 
+
+For example, to specify file **/iplant/home/zl7w2/readsleft.fq** use:
+```
+irods:///iplant/home/zl7w2/readsleft.fq
+```
+Do not use comments or whitespace in the file. Make sure you have the permission of the data, you could check from the [https://de.cyverse.org/de/](https://de.cyverse.org/de/)
+
+**inputs-ref.txt**
+
+Reference genome should be in fasta format. For example, 
+```
+irods:///iplant/home/zl7w2/Gmax_275_v2.0.ch1.fa
+```
+**main.conf**
+
+Specify your input data type (paired or single) and output folder in main.conf as below
+```
+#single-end or paired-end
+inputs-style = paired-end
+output_dir = /iplant/home/zl7w2/output
+```
+
+Samples should be list as format sample_# with it fastq files counts, for example, if you have four samples and each of the sample has 4, 6, 8, 2 fastq files. It shoulbe be edit in the main.conf as below:
+```
+#the replica name of each sample
+sample_0 = 4
+sample_1 = 6
+sample_2 = 8
+sample_3 = 2
+```
+The order of the samples should be consist with it's order in the **inputs-fastq.txt** file. 
+
+Specify the comparison of samples to calculate the differential expression, for example, if you want to compare sample_0 with sample_1, sample_1 with sample_2 and sample_0 with sample_3:
+```
+#choose the samples which need to be compared
+sample_compare_1 = sample__0 & sample__1
+sample_compare_2 = sample__1 & sample__2
+sample_compare_3 = sample__0 & sample__3
+```
 ### Outputs of workflow
+Workflow generates 
+- index reference genome 
+- binary alignment map (BAM) files 
+- mapped file .mr format
+- methylation level .methcount
+- symmetric-cpgs methylation level
+- hypo-methylated regions (HMRs)
+- hyper-methylated regions (HyperMRs)
+- differential methylated regions (DMRs)
+
+
 
 ### Initialize Workflow
 ```
