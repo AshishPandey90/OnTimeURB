@@ -4,7 +4,7 @@ This folder contains details to enable CNV workflow on private machines using do
 # CNV-Workflow
 Below figure shows the pipeline of the workflow:
 
-![cnv_wf](Images/cnv_wf.PNG)
+![cnv_wf](Images/cnv_wf.png)
 
 Copy number variation (CNVs) workflow is used to perform efficient analysis to detect CNVs in the form of gains and losses, from NGS reads. CNV workflow requires user to input a reference sequence and one or multiple sample/condition sequences which should be in BAM format. First, Samtools will extract the map locations from each mapped sequence reads. Outputs are generated in a hits format file which is required for next step as the input of CNV-Seq. The CNVs will be detected also with the confidence values selected by user.
 
