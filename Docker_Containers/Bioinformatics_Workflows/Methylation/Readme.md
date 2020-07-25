@@ -4,7 +4,7 @@ This folder contains details to enable Methylation workflow on private machines 
 # Methylation-Workflow
 Below figure shows the pipeline of the workflow:
 
-![](Images/methylation_wf.PNG)
+![methylation_wf](Images/methylation_wf.png)
 
 
 DNA methylation is one of the main epigenetic modifications in the genome. We have developed the methylation workflow which meets variety of user analysis demands in an efficient and integrative manner. This workflow starts with raw sequence data (FASTQ files).   

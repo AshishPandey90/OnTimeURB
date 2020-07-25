@@ -4,7 +4,7 @@ This folder contains details to enable FastQC workflow on private machines using
 # FastQC-Workflow
 Below figure shows the pipeline of the workflow:
 
-![](Images/fastqc_wf.PNG)
+![fastqc_wf](Images/fastqc_wf.PNG)
 
 
 FastQC workflow is used to conduct quality control checks on raw NGS data coming from high-throughput sequencing projects, to ensure that the data looks good and there are no problems or biases which may affect its further downstream analysis and use. The input to FastQC is FASTQ file. The output from FastQC, after analyzing a FASTQ file of sequence reads, is a HTML file that may be viewed in a user's browser. The report contains results section for each FastQC module. In addition, graphical and list data are provided by each module, a flag of “Passed”, “Warn” or “Fail” is assigned.
