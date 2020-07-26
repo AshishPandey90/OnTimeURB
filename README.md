@@ -25,10 +25,10 @@ A large spectrum of reaserachers can use the software,
 4. Compatible with workflows created from Pegasus workflow managemnent system.
  
  ## Visual and graphics for config, 
- 
+Coming Soon
+
  ## Configuration interface 
- Content should be enough for webinar. Check CIPRES.  check with songjie.., put some marketing text showing variations in software usability.   
- b.1) Test tutorial, buy credit??, reduced dependency
+Coming Soon
  
  ## Security concerns  
  The software executes based on SSh Keys credentials. A single SSH key is which is generated at time of initialization of the software and cluster of machine is used throughout the cluster to access resources. 
