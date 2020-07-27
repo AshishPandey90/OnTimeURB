@@ -18,7 +18,7 @@
  
  
  ## Advantages, 
-A large spectrum of reaserachers can use the software,   
+A large spectrum of reasearchers can use the software,   
 1. It is ideal for researchers from small scale lab (sys admins etc) who do not have enough inhouse compute resources but wish to use public or community cloud resources optionally.  
 2. Large scale cyber infrastucture engineers can leverage multiple clouds simulatneously to create large clusters of machine for analyzing big data (~100Gbs).
 3. Optimal resource allocations/recommendations depending on user requirements of performance. agility, cost and security (PACS). 
