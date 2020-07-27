@@ -31,7 +31,7 @@ Coming Soon
 Coming Soon
  
  ## Security concerns  
- The software executes based on SSh Keys credentials. A single SSH key is which is generated at time of initialization of the software and cluster of machine is used throughout the cluster to access resources. 
+ The software executes based on SSH Keys credentials. A single SSH key is which is generated at time of initialization of the software and cluster of machine is used throughout the cluster to access resources. 
 
  
 We provide docker containers for enabling standalone web services of OnTimeURB with accessible user interface to help in resource brokering as per researchers requirement. We also provide a sample integration of OnTimeURb with bioinformatics workflows to show its effectivity throught docker containers.  
