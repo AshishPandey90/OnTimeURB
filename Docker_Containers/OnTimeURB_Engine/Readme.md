@@ -1,6 +1,5 @@
-# OnTimeURB Container
+# OnTimeURB Docker Container
 
-# Docker Container
 The docker container is availbale on DockerHub and can be downloaded and initialized by below steps,
 ```
 docker pull apfd6/ontimeurb
