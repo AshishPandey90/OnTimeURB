@@ -72,7 +72,7 @@ cd apache/bin
 Ctrl + p + q
 
 # Attach docker port to host port for the image
-docker run -d --name myapp -p 8080:80 myappimage
+docker run -d --name ontimeurb_service -p 8080:80 apfd6/ontimeurb
 
 #get ip address for container
 docker inspect <container_id>
