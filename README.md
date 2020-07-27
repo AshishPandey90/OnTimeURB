@@ -12,8 +12,7 @@
 	* [To do list](https://github.com/AshishPandey90/OnTimeURB/blob/master/README.md#to-do-list)  
  
 
-# OnTimeURB
- a) exactly what can be done with the softwares...orientaton/marketing material.  
+# OnTimeURB 
  This software enables researchers in better utilizing compute resources available with them at local servers as well resources allocations on public cloud platforms. It gives researchers flexibiltiy in creating hybrid cyber infrastruture for their applications requirements. The software have the capapbility of deducing in real time the ideal compute resources allocations for application execution and stages the tasks on those resources.
  
  
