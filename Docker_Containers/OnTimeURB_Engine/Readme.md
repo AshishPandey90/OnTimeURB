@@ -73,6 +73,8 @@ Ctrl + p + q
 
 # Attach docker port to host port for the image
 docker run -d --name ontimeurb_service -p 8080:80 apfd6/ontimeurb
+OR?
+docker run -it -d -p 8080:8080 apfd6/ontimeurb:V1
 
 #get ip address for container
 docker inspect <container_id>
