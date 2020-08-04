@@ -214,7 +214,7 @@ Please refer to https://github.com/tang27abu/Pegasus-Workflow for source code to
 
 Docker containers for below workflows are available with instructions to use them
 
-Bioinformatics Workflows. 
+[Bioinformatics Workflows](./Docker_Containers/Bioinformatics_Workflows) 
 
 a) [Alignment workflow](./Docker_Containers/Bioinformatics_Workflows/Alignment)  
 
@@ -230,7 +230,8 @@ f) [PGen workflow.](./Docker_Containers/Bioinformatics_Workflows/PGen)
 
 
 ## How to use or launch OnTimeURB?
-All bioinformatics application workflows can be executed using the [docker](./Docker_Containers/Bioinformatics_Workflows) containers. 
+All bioinformatics application workflows can be executed using this dicker container: [workflows](./Docker_Containers/Bioinformatics_Workflows) 
+The OnTimeURB can be executed using this docker container: [OnTimeURB](./Docker_Containers/Bioinformatics_Workflows)
 
 ## To do list
 1. Enhancing functionalites of OnTimeURB.  
