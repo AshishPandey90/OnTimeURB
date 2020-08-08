@@ -2,8 +2,8 @@
 
 The docker container is availbale on DockerHub and can be downloaded and initialized by below steps,
 ```
-docker pull apfd6/ontimeurb
-docker run -it apfd6/ontimeurb bash
+docker pull apfd6/ontimeurb:V1
+docker run -it apfd6/ontimeurb:V1 bash
 
 ```
 ## Configuring and tuning the OnTimeURB optimizer engine
@@ -72,9 +72,7 @@ cd apache/bin
 Ctrl + p + q
 
 # Attach docker port to host port for the image
-docker run -d --name ontimeurb_service -p 8080:80 apfd6/ontimeurb
-OR?
-docker run -it -d -p 8080:8080 apfd6/ontimeurb:V1
+docker run -it -d -p 8080:8080 apfd6/ontimeurb:V1 bash
 
 #get ip address for container
 docker inspect <container_id>
@@ -83,4 +81,3 @@ docker inspect <container_id>
 http://<ip_address>:8080/OnTimeURB/getTemplateCatalog
 
 ```
-
