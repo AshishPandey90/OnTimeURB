@@ -81,3 +81,13 @@ docker inspect <container_id>
 http://<ip_address>:8080/OnTimeURB/getTemplateCatalog
 
 ```
+## OnTimeURB Web Services
+```
+
+GET & POST services 
+http://<ip_address>:8080/OnTimeURB/getTemplateCatalog
+http://<ip_address>:8080/OnTimeURB/getRecommendation
+
+```
+![GET Service](Images/OnTimeURB_GET.png)
+![POST Service](Images/OnTimeURB_POST.png)
