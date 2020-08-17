@@ -7,7 +7,16 @@ docker run -it apfd6/ontimeurb:V1 bash
 
 ```
 ## Configuring and tuning the OnTimeURB optimizer engine
-The optimizer engine can be configured as per researcher using config.properties file. Below are the governing variables.
+The optimizer engine can be configured as per researcher using config.properties file. 
+To configuration file is located at below given path, and can be changed dynamically while the server is running.
+
+```
+<Your machine custom path>/<apache OR web server location>/webapps/OnTimeURB/WEB-INF/classes/config
+
+e.g. /users/apfd6/apache-tomee-plus-9.0.0-M1/webapps/OnTimeURB/WEB-INF/classes/config/config.properties
+
+```
+Below are the governing variables.
 ```
 a) Inputing possible supported operating system, it is used to validate knowledge base format \
 os = LINUX,RHEL,SLES,WINDOWS 
