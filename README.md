@@ -55,7 +55,7 @@ d) Workflows are not included in this repository, but can be referered at Pgen w
 ## Configuring the infrastructure
 To create an infrastructure for distributed computing essentially a single submit server(host) and many client servers(clients) architecture is required. Towards that architecture varying configurations has to be made in submit host and clients. Below tools are used for ceating the infrastructure,
 
-# Requirements
+### Requirements
 
 a) A linux host machine with good resource configuration to host the cluster of clients interaction. A machine with 2-4 CPU cores, 8-16 GB RAM, 500 GB storage can be recommended, but it is subjective to user.
 
