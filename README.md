@@ -89,6 +89,7 @@ c)	Install PyGlidein
     specifically, the command to generate a password file is:
       condor_store_cred -f file (or with path to file)
       ```
+
 d)	Configure condor_config file in the /condor/etc/ folder to the working template, included is the command to configure the port to be static so we do not have to change it every time we restart the server. Then use the command “        ” to open up the port.
 
 e)	Configure sites.xml file in the workflow work dir using the working template with the scp commanded added and local storage/scratch folder paths. (This step is to configure workflows to be executed on distributed nodes)
