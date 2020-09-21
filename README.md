@@ -233,7 +233,7 @@ f) [PGen workflow.](./Docker_Containers/Bioinformatics_Workflows/PGen)
 
 
 ## How to use or launch OnTimeURB?
-All bioinformatics application workflows can be executed using this dicker container: [Workflows](./Docker_Containers/Bioinformatics_Workflows)   
+All bioinformatics application workflows can be executed using this docker container: [Workflows](./Docker_Containers/Bioinformatics_Workflows)   
 The OnTimeURB can be executed using this docker container: [OnTimeURB](./Docker_Containers/OnTimeURB_Engine)
 
 ## To do list
