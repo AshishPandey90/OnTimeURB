@@ -69,8 +69,8 @@ d) *pyglidein* (python server-client pair for submitting HTCondor glidein jobs o
 
 ![](Images/PyGlidein.PNG)
 
-Steps to be followed for configuration,
-#### On Submit Host Server
+## Steps to be followed for configuration,
+### On Submit Host Server
 
 a)	Install HTCondor personal edition
   --Download HTCondor 8.8.4 from: https://research.cs.wisc.edu/htcondor/downloads/
@@ -102,7 +102,7 @@ g) After starting the client, check condor_q and condor_status to check for the 
 
 h) When the job status goes to done, check the output folder for job results. 
 
-#### On Client Server
+### On Client Server
 
 a) Install PyGlidein following the website: https://pegasus.isi.edu/documentation/pyglidein.php
 
