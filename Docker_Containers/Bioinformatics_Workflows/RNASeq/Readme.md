@@ -80,6 +80,16 @@ vi .rnaseq-workflow.conf
 username = <your cyverse user name>
 ```
 
+#### Workflow output location
+Below files are located in /home/bamboo/rnaseq/conf/distributes/site.conf folder
+```
+for generation of output on cyverse account
+output_site = irods_iplant
+
+for generation of output on your own docker container
+output_site = local
+```
+
 ### Inputs to workflow
 Below files are located in /home/bamboo/rnaseq folder
 **inputs-fastq.txt**
