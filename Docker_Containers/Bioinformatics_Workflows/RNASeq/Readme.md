@@ -82,7 +82,7 @@ username = <your cyverse user name>
 
 URLs are given in the **irods:///[path]/[filename]** format. 
 
-For example, to specify file /iplant/home/<username>/readsleft.fq use:
+For example, to specify file **/iplant/home//username//readsleft.fq use:
 ```
 irods:///iplant/home/<username>/readsleft.fq
 ```
