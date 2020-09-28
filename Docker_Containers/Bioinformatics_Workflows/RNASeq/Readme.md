@@ -72,13 +72,16 @@ To access data from the iPlant iRods repository, you need a file in your home di
 $ chmod 0600 irods.iplant.json
 ```
 #### Initialize workflow configuration file
-Open .rnaseq-workflow.conf file and make below changes
+Open .rnaseq-workflow.conf file (this is a hidden file, it can be seen with "ls -all" command) and make below changes
 ```
+ls -all
+vi .rnaseq-workflow.conf
 [cyverse]
 username = <your cyverse user name>
 ```
 
 ### Inputs to workflow
+Below files are located in /home/bamboo/rnaseq folder
 **inputs-fastq.txt**
 
 URLs are given in the **irods:///[path]/[filename]** format. 
