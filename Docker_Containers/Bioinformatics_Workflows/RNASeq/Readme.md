@@ -14,6 +14,13 @@ The docker container is availbale on DockerHub and can be downloaded and initial
 ```
 docker pull apfd6/rnaseq_wf:V4  
 
+```
+
+## Configuring the container
+
+### Initialize HTCondor
+The commands below were used to initialize condor.
+```
 docker run -it -d -p 22:22 apfd6/rnaseq_wf:V4 bash
 docker container ls
 docker exec --user root -it <ContainerId> bash
@@ -28,17 +35,8 @@ cd condor-8.8.9
 (move to home folder i.e. /home/bamboo)  
 cd ..  
 
-stay logges in as bamboo user
-```
+stay logged in as bamboo user
 
-## Configuring the container
-
-### Initialize HTCondor
-The commands below were used to initialize condor.
-```
-cd condor-8.8.9
-. ./condor.sh
-condor_master
 ```
 
 ### User Credentials:
