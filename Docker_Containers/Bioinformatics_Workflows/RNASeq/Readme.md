@@ -14,7 +14,17 @@ The docker container is availbale on DockerHub and can be downloaded and initial
 ```
 docker pull apfd6/rnaseq_wf  
 docker run apfd6/rnaseq_wf  
-docker exec --user bamboo -it <ContainerId> bash  
+docker exec --user bamboo -it <ContainerId> bash
+
+docker run -it -d -p 22:22 apfd6/rnaseq_wf:V3 bash
+docker exec --user root -it <ContainerId> bash
+cd condor-8.8.9
+. ./condor.sh
+condor_master
+Ctrl +P +Q
+docker exec --user bamboo -it <ContainerId> bash
+cd condor-8.8.9
+. ./condor.sh
 
 (move to home folder i.e. /home/bamboo)  
 cd ..  
