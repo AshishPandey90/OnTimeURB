@@ -24,6 +24,7 @@ The commands below were used to initialize condor.
 docker run -it -d -p 22:22 apfd6/rnaseq_wf:V4 bash
 docker container ls
 docker exec --user root -it <ContainerId> bash
+service ssh start
 cd condor-8.8.9
 . ./condor.sh
 condor_master
