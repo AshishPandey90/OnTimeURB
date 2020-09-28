@@ -156,6 +156,12 @@ Workflow generates
 ```
 cd rnaseq
 ./workflow-generator-multipleOnly --exec-env distributed
+
+logs will be generated here showing configuration of executing the workflow.
+
+pegasus-run  <path of the directory hosting workflow>
+example: pegasus-run  /home/bamboo/rnaseq/20200928-135059/wf-20200928-135059
+
 ```
 
 ### Running and Monitoring the workflow
