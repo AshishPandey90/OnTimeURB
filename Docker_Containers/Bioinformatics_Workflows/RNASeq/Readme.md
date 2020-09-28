@@ -12,11 +12,10 @@ RNA-Seq analysis workflow is used to perform quantification of gene expression f
 The docker container is availbale on DockerHub and can be downloaded and initialized by below steps,
 
 ```
-docker pull apfd6/rnaseq_wf  
-docker run apfd6/rnaseq_wf  
-docker exec --user bamboo -it <ContainerId> bash
+docker pull apfd6/rnaseq_wf:V4  
 
-docker run -it -d -p 22:22 apfd6/rnaseq_wf:V3 bash
+docker run -it -d -p 22:22 apfd6/rnaseq_wf:V4 bash
+docker container ls
 docker exec --user root -it <ContainerId> bash
 cd condor-8.8.9
 . ./condor.sh
@@ -33,7 +32,7 @@ cd ..
 ## Configuring the container
 
 ### Initialize HTCondor
-
+The commands below were used to initialize condor.
 ```
 cd condor-8.8.9
 . ./condor.sh
@@ -51,6 +50,10 @@ $ ssh-keygen -t rsa -b 2048 -f ~/.ssh/workflow
   (just hit enter when asked for a passphrase)  
   
 $ cat ~/.ssh/workflow.pub >>~/.ssh/authorized_keys
+
+$ chmod 755 ~/.ssh
+$ chmod 644 ~/.ssh/authorized_keys
+
 ```
 
 #### iPlant connection file
@@ -79,9 +82,9 @@ username = <your cyverse user name>
 
 URLs are given in the **irods:///[path]/[filename]** format. 
 
-For example, to specify file **/iplant/home/zl7w2/readsleft.fq** use:
+For example, to specify file **/iplant/home/<username>/readsleft.fq** use:
 ```
-irods:///iplant/home/zl7w2/readsleft.fq
+irods:///iplant/home/<username>/readsleft.fq
 ```
 Do not use comments or whitespace in the file. Make sure you have the permission of the data, you could check from the [https://de.cyverse.org/de/](https://de.cyverse.org/de/)
 
@@ -89,13 +92,13 @@ Do not use comments or whitespace in the file. Make sure you have the permission
 
 Reference genome should be in fasta format. For example, 
 ```
-irods:///iplant/home/zl7w2/Gmax_275_v2.0.ch1.fa
+irods:///iplant/home/<username>/Gmax_275_v2.0.ch1.fa
 ```
 **inputs-gtf.txt**
 
 Reference genome should be in fasta format. For example, 
 ```
-irods:///iplant/home/zl7w2/Gmax_275_Wm82.a2.v1.gene.gtf
+irods:///iplant/home/<username>/Gmax_275_Wm82.a2.v1.gene.gtf
 ```
 **main.conf**
 
@@ -103,7 +106,7 @@ Specify your input data type (paired or single) and output folder in main.conf a
 ```
 #single-end or paired-end
 inputs-style = paired-end
-output_dir = /iplant/home/zl7w2/output
+output_dir = /iplant/home/<username>/output
 ```
 
 Samples should be list as format sample_# with it fastq files counts, for example, if you have four samples and each of the sample has 4, 6, 8, 2 fastq files. It shoulbe be edit in the main.conf as below:
@@ -152,7 +155,7 @@ Workflow generates
 ### Initialize Workflow
 ```
 cd rnaseq
-./workflow-generator --exec-env distributed
+./workflow-generator-multipleOnly --exec-env distributed
 ```
 
 ### Running and Monitoring the workflow
