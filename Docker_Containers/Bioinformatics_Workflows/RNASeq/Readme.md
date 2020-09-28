@@ -27,7 +27,7 @@ docker exec --user root -it <ContainerId> bash
 cd condor-8.8.9
 . ./condor.sh
 condor_master
-Ctrl +P +Q
+Ctrl +p +q
 docker exec --user bamboo -it <ContainerId> bash
 cd condor-8.8.9
 . ./condor.sh
