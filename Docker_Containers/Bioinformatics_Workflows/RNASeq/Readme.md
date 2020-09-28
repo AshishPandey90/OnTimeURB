@@ -27,6 +27,8 @@ cd condor-8.8.9
 
 (move to home folder i.e. /home/bamboo)  
 cd ..  
+
+stay logges in as bamboo user
 ```
 
 ## Configuring the container
