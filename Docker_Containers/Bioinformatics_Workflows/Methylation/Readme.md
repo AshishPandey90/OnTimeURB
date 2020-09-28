@@ -16,11 +16,6 @@ The docker container is availbale on DockerHub and can be downloaded and initial
 
 ```
 docker pull apfd6/methylation_wf  
-docker run apfd6/methylation_wf  
-docker exec --user bamboo -it <ContainerId> bash  
-
-(move to home folder i.e. /home/bamboo)  
-cd ..  
 ```
 
 ## Configuring the container
@@ -28,9 +23,22 @@ cd ..
 ### Initialize HTCondor
 
 ```
+docker run -it -d -p 22:22 apfd6/methylation_wf:latest bash
+docker container ls
+docker exec --user root -it <ContainerId> bash
+service ssh start
 cd condor-8.8.9
 . ./condor.sh
 condor_master
+Ctrl +p +q
+docker exec --user bamboo -it <ContainerId> bash
+cd condor-8.8.9
+. ./condor.sh
+
+(move to home folder i.e. /home/bamboo)  
+cd ..  
+
+stay logged in as bamboo user
 ```
 
 ### User Credentials:
@@ -44,6 +52,9 @@ $ ssh-keygen -t rsa -b 2048 -f ~/.ssh/workflow
   (just hit enter when asked for a passphrase)  
   
 $ cat ~/.ssh/workflow.pub >>~/.ssh/authorized_keys
+
+$ chmod 755 ~/.ssh
+$ chmod 644 ~/.ssh/authorized_keys
 ```
 
 #### iPlant connection file
@@ -61,21 +72,32 @@ To access data from the iPlant iRods repository, you need a file in your home di
 $ chmod 0600 irods.iplant.json
 ```
 #### Initialize workflow configuration file
-Open .methylation-workflow.conf file and make below changes
+Open .methylation-workflow.conf file (this is a hidden file, it can be seen with "ls -all" command) and make below changes
 ```
+ls -all
+vi .methylation-workflow.conf
+
 [cyverse]
 username = <your cyverse user name>
 ```
+#### Workflow output location
+Below files are located in /home/bamboo/methylation/conf/distributes/site.conf folder
+```
+for generation of output on cyverse account
+output_site = irods_iplant
 
+for generation of output on your own docker container
+output_site = local
+```
 ### Inputs to workflow
 
 **inputs-fastq.txt**
 
 URLs are given in the **irods:///[path]/[filename]** format. 
 
-For example, to specify file **/iplant/home/zl7w2/readsleft.fq** use:
+For example, to specify file **/iplant/home/cyverse_user_name/readsleft.fq** use:
 ```
-irods:///iplant/home/zl7w2/readsleft.fq
+irods:///iplant/home/<username>/readsleft.fq
 ```
 Do not use comments or whitespace in the file. Make sure you have the permission of the data, you could check from the [https://de.cyverse.org/de/](https://de.cyverse.org/de/)
 
@@ -83,7 +105,7 @@ Do not use comments or whitespace in the file. Make sure you have the permission
 
 Reference genome should be in fasta format. For example, 
 ```
-irods:///iplant/home/zl7w2/Gmax_275_v2.0.ch1.fa
+irods:///iplant/home/<username>/Gmax_275_v2.0.ch1.fa
 ```
 **main.conf**
 
@@ -91,7 +113,7 @@ Specify your input data type (paired or single) and output folder in main.conf a
 ```
 #single-end or paired-end
 inputs-style = paired-end
-output_dir = /iplant/home/zl7w2/output
+output_dir = /iplant/home/<username>/output
 ```
 
 Samples should be list as format sample_# with it fastq files counts, for example, if you have four samples and each of the sample has 4, 6, 8, 2 fastq files. It shoulbe be edit in the main.conf as below:
@@ -126,8 +148,18 @@ Workflow generates
 
 ### Initialize Workflow
 ```
-cd rnaseq
+cd methylation
+
+modify value of output_dir inside the file workflow-generator-multipleOnly to the path in cyverse where output of workflow is expected
+example: output_dir= '/iplant/home/<cyverse_username>/Methylation_wf/Output'
+
+Execute below command:
+logs will be generated  showing configuration of executing the workflow.
+
 ./workflow-generator --exec-env distributed
+
+pegasus-run  <path of the directory hosting workflow>
+  example: pegasus-run  /home/bamboo/methylation/20200928-135059/wf-20200928-135059
 ```
 
 ### Running and Monitoring the workflow
