@@ -156,12 +156,17 @@ Workflow generates
 ### Initialize Workflow
 ```
 cd rnaseq
+
+modify value of output_dir inside the file workflow-generator-multipleOnly to the path in cyverse where output of workflow is expected
+example: output_dir= '/iplant/home/<cyverse_username>/RNASeq_wf/Output'
+
+Execute below command:
+logs will be generated  showing configuration of executing the workflow.
+
 ./workflow-generator-multipleOnly --exec-env distributed
 
-logs will be generated here showing configuration of executing the workflow.
-
 pegasus-run  <path of the directory hosting workflow>
-example: pegasus-run  /home/bamboo/rnaseq/20200928-135059/wf-20200928-135059
+  example: pegasus-run  /home/bamboo/rnaseq/20200928-135059/wf-20200928-135059
 
 ```
 
