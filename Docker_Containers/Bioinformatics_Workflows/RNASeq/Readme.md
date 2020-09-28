@@ -91,7 +91,7 @@ output_site = local
 ```
 
 ### Inputs to workflow
-Below files are located in /home/bamboo/rnaseq folder
+Below files are located in /home/bamboo/rnaseq folder. Sample inputs are provided in the files. Please modify them as per your cyverse account path.
 **inputs-fastq.txt**
 
 URLs are given in the **irods:///[path]/[filename]** format. 
