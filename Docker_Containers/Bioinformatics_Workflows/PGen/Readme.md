@@ -14,11 +14,6 @@ The docker container is availbale on DockerHub and can be downloaded and initial
 
 ```
 docker pull apfd6/pgen_wf  
-docker run apfd6/pgen_wf  
-docker exec --user bamboo -it <ContainerId> bash  
-
-(move to home folder i.e. /home/bamboo)  
-cd ..  
 ```
 
 ## Configuring the container
@@ -26,9 +21,22 @@ cd ..
 ### Initialize HTCondor
 
 ```
+docker run -it -d -p 22:22 apfd6/pgen_wf:latest bash
+docker container ls
+docker exec --user root -it <ContainerId> bash
+service ssh start
 cd condor-8.8.9
 . ./condor.sh
 condor_master
+Ctrl +p +q
+docker exec --user bamboo -it <ContainerId> bash
+cd condor-8.8.9
+. ./condor.sh
+
+(move to home folder i.e. /home/bamboo)  
+cd ..  
+
+stay logged in as bamboo user
 ```
 
 ### User Credentials:
@@ -42,6 +50,9 @@ $ ssh-keygen -t rsa -b 2048 -f ~/.ssh/workflow
   (just hit enter when asked for a passphrase)  
   
 $ cat ~/.ssh/workflow.pub >>~/.ssh/authorized_keys
+
+$ chmod 755 ~/.ssh
+$ chmod 644 ~/.ssh/authorized_keys
 ```
 
 #### iPlant connection file
@@ -59,12 +70,21 @@ To access data from the iPlant iRods repository, you need a file in your home di
 $ chmod 0600 irods.iplant.json
 ```
 #### Initialize workflow configuration file
-Open .pgen-workflow.conf file and make below changes
+Open .pgen-workflow.conf file (this is a hidden file, it can be seen with "ls -all" command) and make below changes
 ```
+ls -all
+vi .pgen-workflow.conf
 [cyverse]
 username = <your cyverse user name>
 ```
+#### Workflow output location
+```
+for generation of output on cyverse account
+output_site = irods_iplant
 
+for generation of output on your own docker container
+output_site = local
+```
 ### Inputs to workflow
 
 Specifying input data is done in two files inputs-fastq.txt and inputs-ref.txt.
@@ -136,8 +156,18 @@ Different filtration can be used and changed in ‘main.conf’ file by editing 
 
 ### Initialize Workflow
 ```
-cd rnaseq
+cd pgen
+
+modify value of output_dir inside the file workflow-generator-multipleOnly to the path in cyverse where output of workflow is expected
+example: output_dir= '/iplant/home/<cyverse_username>/Pgen_wf/Output'
+
+Execute below command:
+logs will be generated  showing configuration of executing the workflow.
+
 ./workflow-generator --exec-env distributed
+
+pegasus-run  <path of the directory hosting workflow>
+  example: pegasus-run  /home/bamboo/pgen/20200928-135059/wf-20200928-135059
 ```
 
 ### Running and Monitoring the workflow
