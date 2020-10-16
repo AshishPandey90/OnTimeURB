@@ -22,7 +22,12 @@ docker pull apfd6/alignment_wf
 ### Initialize HTCondor
 
 ```
+For windows:
 docker run -it -d -p 22:22 apfd6/alignment_wf:latest bash
+
+For Linux:
+docker run -it apfd6/alignment_wf:latest bash
+
 docker container ls
 docker exec --user root -it <ContainerId> bash
 service ssh start
