@@ -23,7 +23,12 @@ docker pull apfd6/methylation_wf
 ### Initialize HTCondor
 
 ```
+For Windows:
 docker run -it -d -p 22:22 apfd6/methylation_wf:latest bash
+
+For Linux:
+docker run -it apfd6/methylation_wf:latest bash
+
 docker container ls
 docker exec --user root -it <ContainerId> bash
 service ssh start
