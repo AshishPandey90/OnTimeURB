@@ -21,7 +21,12 @@ docker pull apfd6/rnaseq_wf:V4
 ### Initialize HTCondor
 The commands below were used to initialize condor.
 ```
+For Windows:
 docker run -it -d -p 22:22 apfd6/rnaseq_wf:V4 bash
+
+For Linux:
+docker run -it -d -p 22:22 apfd6/rnaseq_wf:V4 bash
+
 docker container ls
 docker exec --user root -it <ContainerId> bash
 cd
